@@ -1,14 +1,17 @@
 function GM:HUDPaint()
 	if player_manager.RunClass(LocalPlayer(), "DrawHUD") then return end
 	
-	if not self:GetRoundActive() then
+	----------------------------------------------------
+	-- The below code was removed from orginal code due to causing hud issue
+	----------------------------------------------------
+	--[[if not self:GetRoundActive() then
 		local h, w = ScrH(), ScrW()
 		if not self:GetZMSelection() then
 			draw.SimpleTextOutlined(translate.Get("waiting_on_players"), "zm_hud_font_small", w * 0.5, h * 0.25, Color(150, 0, 0), TEXT_ALIGN_CENTER, TEXT_ALIGN_TOP, 1, color_black)
 		else
 			draw.SimpleTextOutlined(translate.Get("players_ready"), "zm_hud_font_small", w * 0.5, h * 0.25, Color(0, 150, 0), TEXT_ALIGN_CENTER, TEXT_ALIGN_TOP, 1, color_black)
 		end
-	end
+	end]]
 	
 	hook.Call( "HUDDrawTargetID", self )
 	hook.Call( "HUDDrawPickupHistory", self )

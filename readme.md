@@ -3,3 +3,11 @@ This is a very basic port of Zombie Master (http://www.zombiemaster.org/) made t
 
 License:
 Please check license.txt
+----
+## Changes from orginal:
+#### Changes:
+    - Removed players ready display
+
+#### Edited files:
+    - gamemode/cl_hud.lua
+    - reademe.md
